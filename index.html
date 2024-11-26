@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/55bed60c3e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+       <img src="" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Explorer</p>
+        <h1>Hi, I'm <span>Srideep</span><br>Kundu from India</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/Background3.jpg" >
+        </div>
+        <div class="about-col-1">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Hello everyone! I am a first year student from Institute of Technical Education and Research, Siksha 'O' Anusandhan University. I am currently learning web development and also improving my problem solving skills by learning Data Structures and Algorithms (DSA) and solving loads of questions from Leetcode, Hackerrank, etc.
+            I look forward to explore more in these upcoming four years and hopefully my skills prove to be some kind of contribution to this world.
+            I'll consider myself successful if I am able to solve any real major problem of this modern age with the help of my skills.
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web-development</span><br>HTML, CSS and JavaScript</li>
+                <li><span>Data Structures and Algorithms</span><br>Java and Problem Solving</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2024-current</span><br>As of now, no experience, just a fresher and this is my first project :)</li>
+                
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2022</span><br>ICSE Graduate from St.Patricks Higher Secondary School, Asansol</li>
+                <li><span>2024</span><br>CBSE Graduate from Hem Sheela Model School, Durgapur</li>
+                <li><span>Current</span><br>Fresher at ITER, SOA University</li>
+              </ul>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Portfolio -->
+ <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/Hackerrankson.png">
+          <div class="layer">
+            <h3>HackerRank Profile</h3>
+            <p>You can view my HackerRank profile to judge my problem solving skills. </p>
+            <a href="https://www.hackerrank.com/profile/ksrideep007"><i class="fa-solid fa-up-right-from-square" style="color: #b52c2c;"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/file.jpg">
+          <div class="layer">
+            <h3>LeetCode Profile</h3>
+            <p>You can view my LeetCode profile to judge my problem solving skills. </p>
+            <a href="https://leetcode.com/u/Srideep_Kundu/"><i class="fa-solid fa-up-right-from-square" style="color: #b52c2c;"></i></a>
+          </div>
+        </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+ </div>
+
+    <!--  contact -->
+ <div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+       <h1 class="sub-title">Contact Me</h1>
+       <p><i class="fa-solid fa-paper-plane"></i>ksrideep007@gmail.com</p>
+       <p><i class="fa-solid fa-square-phone"></i>6294065306</p>
+       <div class="social-icons">
+        <a href="https://www.linkedin.com/in/srideep-kundu/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/ksrideep007?fbclid=PAZXh0bgNhZW0CMTEAAabsziCi6aRm1U_KLilMmTFVXLSsHGg8xmrjLswIi7kOBojJR9mEoxvndkQ_aem_GwlMFXw4D7hOOK6uBlPM2A"><i class="fa-brands fa-twitter-square"></i></a>
+        <a href="https://www.instagram.com/itssrideep/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/Srideep-Kundu"><i class="fa-brands fa-github"></i></a>
+       </div>
+
+       <!-- download CV -->
+       <!-- <a href="" class="btn btn2"></a> -->
+      </div>
+      <div class="contact-left">
+      <form name="submit-to-google-sheet">
+           <input type="text" name="Name" placeholder="Your Name" required>
+           <input type="email" name="Email" placeholder="Your Email" required>
+           <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+           <button type="submit" class="btn btn2">Submit</button>       
+      </form>
+      <span id="msg"></span>
+    </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright &#169 Srideep.</p>
+  </div>
+ </div>
+
+
+
+
+
+  <script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+  </script>
+
+<script>
+
+
+    var sidemenu= document.getElementById("sidemenu");
+    
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx5N0J_8CeI89-mg_kWw1-YOotKjnFntw2dE9CfuFedFbV3lvuqvNWvK2CMVPXF35mf/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg= document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+
+
+</body>
+</html>
